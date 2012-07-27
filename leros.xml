@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+	<title>Leros</title>
+	<chapter xml:id="introduction">
+		<title>Leros</title>
+		<para>Leros is a MVC based HTML5 bootstrap. It uses only one static page, and servers the child pages using HashTags as apps</para>
+	</chapter>
+	<chapter xml:id="basics">
+		<title>Basics</title>
+		<sect1>
+			<title>The chrome page (Index.html</title>
+			<para>The index.html, aka. chrome page, is the page that shells the site. It should contains these things:</para>
+			<example>
+				<title>index.html</title>
+				<programlisting language="html"><![CDATA[<!doctype html>
+<html>
+	<head>
+		<script src="js/boardia.js" type="text/JavaScript"></script>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div id="search">
+				<input type="search" class="input" />
+			</div>
+		</header>
+		<nav >
+			<ul id="tree">
+				<a href="#!/app/home">Home</a>
+				<a href="#!/app/blog">Blog</a>
+				<a href="#!/app/portfolio">Portfolio</a>
+			</ul>
+		</nav>
+		<div id="content">
+		test
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>]]></programlisting>
+				<para>There is no php code allowed in this page</para>
+			</example>
+			<sect2>
+				<title>Hashlinks</titlE>
+				<para>All pages and sections in a Leros bootstrap app is 
+		</sect1>
+		<sect1>
+			<title>Apps</title>
+			<para>All sections is apps in Leros. An app consists of a controller, that presents a page (aka. view). The view is loaded by the controller's ajax.</para>
+			<

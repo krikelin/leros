@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="js/boardia.js" type="text/JavaScript"></script>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script>
+			var audio = null;
+			var audioContext = new webkitAudioContext();
+			function play(buffer) {
+				var source = audioContext.createBufferSource();
+				source.buffer = buffer;
+				source.conncet(source.destination);
+				source.noteOn(0);
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="search">
+				<input type="search" class="input" />
+			</div>
+		</header>
+		<nav >
+			<ul id="tree">
+				<a href="#!/app/home">Home</a>
+				<a href="#!/app/blog">Blog</a>
+				<a href="#!/app/portfolio">Portfolio</a>
+			</ul>
+		</nav>
+		<div id="content">
+		test
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<h1>Audiodemo</h1>
+<script type="text/JavaScript">
+	
+	var request = new XMLHttpRequest();
+	request.open('GET', "assets/wav/tabla.ogg", true);
+	request.responseType = 'arraybuffer';
+	
+	// Decode asynchronously
+	request.onload = function() {
+		context.decodeAudioData(request.response, function(buffer) {
+			alert(buffer);
+			audio = buffer;
+			
+		}, onError);
+	};
+	request.send();
+	function onError(e) {
+		alert(e.stack);
+	}
+</script>
+<button class="btn" onclick="play(audio)">Play</button>
